@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import reducer from "./reducer/index";
+import { useReducer } from "react";
+import initialState from "./utility/script";
+import Dashboard from "./component/Dashboard";
+import cardContext from "./reducer/context";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [state, action] = useReducer(reducer, initialState);
+    return (
+        <cardContext.Provider value={[state, action]}>
+            <Dashboard />
+        </cardContext.Provider>
+    );
 }
-
 export default App;

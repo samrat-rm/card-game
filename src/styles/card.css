@@ -1,0 +1,38 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 168px;
+    border: 2px solid rgb(75, 75, 75);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    gap: 0;
+    cursor: pointer;
+    background: #fff;
+}
+.suit {
+    font-size: 65px;
+    margin: 0;
+}
+.cardValue {
+    font-size: 28px;
+    margin: 0;
+}
+.left {
+    align-self: flex-start;
+}
+.six {
+    text-decoration: underline;
+}
+.right {
+    align-self: flex-end;
+}
+.color-red {
+    color: red;
+}
+.color-black {
+    color: black;
+}
